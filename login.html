@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login And Registration Using Html and css,javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <H1>Welcome to DsCode...</H1>
+    <div id="signup" class="form">
+        <h2 class="stext">Sign Up</h2>
+        <div id="signup" class="form">
+            <h2 class="stext">Sign Up</h2>
+            <div class="scontent">
+                <form action="register.php" method="post">
+                    <input class="itext" type="text" name="name" placeholder="Name">
+                    <br>
+                    <input class="iemail" type="email" name="email" placeholder="Email">
+                    <br>
+                    <input class="ipass" type="password" name="password" placeholder="Password">
+                    <br>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <div class="pos">
+                    <a id="si" onclick="showLogin()" href="#already-member" class="am">
+            Already A Member?
+            </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="login" class="form">
+
+        <h2 class="stext">Login</h2>
+        <div class="scontent">
+            <form action="login.php" method="post">
+                <input class="iemail" type="email" name="email" placeholder="Email" required>
+                <br>
+                <input class="ipass" type="password" name="password" placeholder="Password" required>
+                <br>
+                <button type="submit" class="btn">Log In</button>
+            </form>
+        </div>
+    </div>
+    <a id="si2" onclick="showSignup()" href="#not-a-member" class="am">
+            Not A Member ?
+            </a>
+    </div>
+    </div>
+    </div>
+    <script>
+        function showLogin() {
+            var y = document.getElementById("signup");
+            var x = document.getElementById("login");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+                x.style.display = "block";
+            }
+        }
+
+        function showSignup() {
+            var x = document.getElementById("login");
+            var y = document.getElementById("signup");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                y.style.display = "block";
+
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
